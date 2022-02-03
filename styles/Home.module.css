@@ -1,5 +1,8 @@
 .container {
   padding: 0 2rem;
+  background-color: rgba(0, 0, 0, 0.993);
+  background-image: url(../public/stardust.png);
+  /* 图片比较容易缺失 */
 }
 
 .main {
@@ -113,4 +116,15 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.navbar {
+  height: 3rem;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.856);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px;
+  box-shadow: 0 1px solid #eaeaea;
 }
