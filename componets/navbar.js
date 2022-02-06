@@ -55,6 +55,7 @@ const NavBar = (props) => {
   );
 };
 
+// 可以从 react Icon 直接获取
 const CloseIcon = () => (
   <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
     <title>Close</title>
@@ -65,6 +66,7 @@ const CloseIcon = () => (
   </svg>
 );
 
+// 可以从 react Icon 直接获取
 const MenuIcon = () => (
   <svg
     width="24px"
