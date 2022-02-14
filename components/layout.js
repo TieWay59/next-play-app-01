@@ -1,9 +1,7 @@
 import Head from "next/head";
-import Navbar from "./navbar";
-// import Footer from "./footer";
-import styles from "../styles/Home.module.css";
+import Navbar from "components/navbar";
+import styles from "styles/Home.module.css";
 
-// TODO: 可能需要一个 Felx 容器来包裹
 export default function Layout({ children }) {
   return (
     <div className={styles.bgimage}>

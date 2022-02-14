@@ -1,4 +1,4 @@
-import styles from "../styles/Home.module.css";
+import styles from "styles/Home.module.css";
 
 import { Link, Box, Flex, Text, Button, Stack } from "@chakra-ui/react";
 import React from "react";
