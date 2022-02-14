@@ -8,6 +8,7 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
+import { BlurFilterBox } from "components/BlurFilterBox";
 
 /*
 a better meta-data pattern:
@@ -73,14 +74,7 @@ const GithubReadmeStatsUrl = (config, name) =>
 const ProfileGroups = () => (
   <SimpleGrid columns={[1, 1, 2, 3]} spacing={4}>
     {profiles.map((item) => (
-      <Box
-        borderRadius="md"
-        bg="whiteAlpha.900"
-        backdropFilter="auto"
-        backdropBlur="1"
-        maxW={500}
-        overflow="hidden"
-      >
+      <BlurFilterBox borderRadius="md" maxW={500} overflow="hidden">
         <Box
           bgImage={GithubAvatarPng(item.githubHandle)}
           backgroundRepeat="no-repeat"
@@ -135,7 +129,7 @@ const ProfileGroups = () => (
             ></Image>
           </Link>
         </Box>
-      </Box>
+      </BlurFilterBox>
     ))}
   </SimpleGrid>
 );
