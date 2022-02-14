@@ -1,6 +1,7 @@
 .bgimage {
   background-color: rgba(0, 0, 0);
   background-image: url(../public/stardust.png);
+  min-height: 100vh;
   /* 图片比较容易缺失 */
 }
 

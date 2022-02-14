@@ -1,38 +1,4 @@
 import styles from "../styles/Home.module.css";
-// import {
-//     Menu,
-//     MenuButton,
-//     MenuList,
-//     MenuItem,
-//     MenuItemOption,
-//     MenuGroup,
-//     MenuOptionGroup,
-//     MenuDivider,
-//     Flex,
-//     Spacer,
-//     Box,
-//     Button,
-// } from '@chakra-ui/react'
-
-// export default function NavBar() {
-//     return (
-//         <Flex className={styles.navbar} >
-//             <Box>
-//                 X-lab Logo
-//             </Box>
-//             <Spacer></Spacer>
-//             <Menu isLazy>
-//                 <MenuButton>菜单栏</MenuButton>
-//                 <MenuList>
-//                     {/* MenuItems are not rendered unless Menu is open */}
-//                     <MenuItem>New Window</MenuItem>
-//                     <MenuItem>Open Closed Tab</MenuItem>
-//                     <MenuItem>Open File</MenuItem>
-//                 </MenuList>
-//             </Menu>
-//         </Flex>
-//     )
-// }
 
 import { Link, Box, Flex, Text, Button, Stack } from "@chakra-ui/react";
 import React from "react";
@@ -111,10 +77,10 @@ const MenuLinks = ({ isOpen }) => {
         pt={[4, 4, 0, 0]}
       >
         <MenuItem to="/">Home</MenuItem>
-        <MenuItem to="/how">How It works </MenuItem>
-        <MenuItem to="/faetures">Features </MenuItem>
-        <MenuItem to="/pricing">Pricing </MenuItem>
-        <MenuItem to="/signup" isLast>
+        <MenuItem to="/people"> People </MenuItem>
+        {/* <MenuItem to="/faetures">Features </MenuItem>
+        <MenuItem to="/pricing">Pricing </MenuItem> */}
+        {/* <MenuItem to="/signup" isLast>
           <Button
             size="sm"
             rounded="md"
@@ -126,7 +92,7 @@ const MenuLinks = ({ isOpen }) => {
           >
             Create Account
           </Button>
-        </MenuItem>
+        </MenuItem> */}
       </Stack>
     </Box>
   );
@@ -135,6 +101,7 @@ const MenuLinks = ({ isOpen }) => {
 const NavBarContainer = ({ children, ...props }) => {
   return (
     <Flex
+      zIndex={1000}
       as="nav"
       align="center"
       justify="space-between"
