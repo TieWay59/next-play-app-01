@@ -1,6 +1,7 @@
 import Head from "next/head";
-import Navbar from "components/NavBar";
-import styles from "styles/Home.module.css";
+import Navbar from "../components/NavBar";
+import styles from "../styles/Home.module.css";
+import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
@@ -12,7 +13,7 @@ export default function Layout({ children }) {
       </Head>
       <Navbar />
       <main>{children}</main>
-      <foot>this is footer</foot>
+      <Footer />
     </div>
   );
 }

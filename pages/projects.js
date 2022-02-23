@@ -1,5 +1,5 @@
 import { Container, Image, Link } from "@chakra-ui/react";
-import { BlurFilterBox } from "components/BlurFilterBox";
+import { BlurFilterBox } from "../components/BlurFilterBox";
 
 // 请求GitHub仓库list的api https://docs.github.com/en/rest/reference/repos （但可能用不到这个）
 const xlab2017RepoList = [
@@ -24,7 +24,7 @@ const ProjectProfile = ({ orgName, repoName }) => (
 const ProjectProfileGroup = ({ repoList }) => (
   <div>
     {repoList.map(({ orgName, repoName }) => (
-      <ProjectProfile orgName={orgName} repoName={repoName} />
+      <ProjectProfile orgName={orgName} repoName={repoName} key={orgName} />
     ))}
   </div>
 );

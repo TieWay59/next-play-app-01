@@ -8,7 +8,7 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import { BlurFilterBox } from "components/BlurFilterBox";
+import { BlurFilterBox } from "../components/BlurFilterBox";
 
 /*
 a better meta-data pattern:
