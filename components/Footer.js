@@ -1,5 +1,6 @@
 import {
   Box,
+  Center,
   Container,
   Flex,
   Image,
@@ -48,16 +49,44 @@ const ExternalLinkItemGroup = ({ children, ...rest }) => (
   </VStack>
 );
 
+const FooterBaseText = ({ children }) => (
+  <Text fontSize="x-small" lineHeight={1.25} color={"whiteAlpha.600"}>
+    {children}
+  </Text>
+);
+
+const ContactInfo = () => (
+  <>
+    <FooterBaseText>电邮: wwang@dase.ecnu.edu.cn</FooterBaseText>
+    <FooterBaseText>地址: 中国上海市普陀区中山北路3663号</FooterBaseText>
+  </>
+);
+
+const CopyRight = () => <FooterBaseText>© 2022 X-Lab</FooterBaseText>;
+
+const ICPlicense = () => <FooterBaseText>域名备案占位符</FooterBaseText>;
+
+const FooterBase = () => (
+  <VStack>
+    <ContactInfo />
+    <CopyRight />
+    <ICPlicense />
+  </VStack>
+);
+
 export default function Footer({ children }) {
   return (
-    <Flex bg="black">
-      <Box flex={[0, 0, 0, 1]}></Box>
-      <Box flex={4} p="4">
-        <Logo width="40" />
-      </Box>
-      <Spacer />
-      <ExternalLinkItemGroup flex={2} p="4" />
-      <Box flex={[0, 0, 0, 1]}></Box>
-    </Flex>
+    <Box bg="black">
+      <Flex>
+        <Box flex={[0, 0, 0, 1]}></Box>
+        <Box flex={4} p="4">
+          <Logo width="40" />
+        </Box>
+        <Spacer />
+        <ExternalLinkItemGroup flex={2} p="4" />
+        <Box flex={[0, 0, 0, 1]}></Box>
+      </Flex>
+      <FooterBase flex={12} />
+    </Box>
   );
 }
