@@ -137,7 +137,6 @@ const ProfileGroups = () => (
 export default function People() {
   return (
     <div>
-      <Container minH={300}></Container>
       <Container
         centerContent
         maxW={["container.md", "container.md", "container.md", "container.xl"]}
