@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import Head from "next/head";
 import Navbar from "../components/NavBar";
 import styles from "../styles/Home.module.css";
@@ -12,8 +13,12 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main>{children}</main>
-      <Footer />
+      <main>
+        <Box paddingTop="100px" minH="100vh">
+          {children}
+        </Box>
+      </main>
+      <Footer /> 
     </div>
   );
 }
